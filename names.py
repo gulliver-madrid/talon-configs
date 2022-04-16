@@ -7,14 +7,21 @@ ctx.lists["user.name"] = """
 abbreviate
 config
 cursor
+cursorless
 git
 list
 mode
 path
+rust
 short
 self
-splice sites
 toggle
+tree
 user
 word
 """.split("\n")
+
+@mod.capture(rule="{self.name}")
+def name(m) -> str:
+    """Common words that are often interpreted wrongly"""
+    return m.name
