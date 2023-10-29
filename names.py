@@ -9,6 +9,7 @@ config
 cursor
 cursorless
 git
+json
 list
 mode
 path
@@ -20,6 +21,7 @@ tree
 user
 word
 """.split("\n")
+
 
 @mod.capture(rule="{self.name}")
 def name(m) -> str:
